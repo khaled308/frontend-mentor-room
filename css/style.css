@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.top{
+    position: relative;
+}
+.top .left{
+    background-size: cover !important;
+    background-position: center;
+    width: 55%;
+    color: #fff;
+    padding: 50px;
+}
+.top nav{
+    width: 100%;
+    justify-content: flex-start;
+    gap: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+nav .links{
+    gap: 20px;
+    transition: all .4s ease;
+}
+nav .toggle-btns{
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 20px;
+    display: none;
+}
+.top .right{
+    width: 45%;
+    padding: 100px 150px ;
+}
+.right .txt{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.top .right h1{
+    font-size: 40px;
+}
+.top .right p{
+    line-height: 1.6;
+    color: hsl(0, 0%, 27%);
+    margin-bottom: 30px;
+}
+.hidden{
+    display: none;
+}
+.slides-btn{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 64px);
+    width: 140px;
+}
+.slides-btn div{
+    width: 70px;
+    height: 70px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.bottom div{
+    width: calc(100% / 3);
+}
+.bottom img{
+    width: 100%;
+    height: 100%;
+}
+.bottom .about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.bottom .about-text h2{
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+.bottom .about-text p{
+    line-height: 1.6;
+}
+@media(max-width:767px){
+    .top{
+        flex-direction: column;
+    }
+    .top .right,
+    .top .left{
+        width: 100%;
+    }
+    .top .right{
+        padding: 20px;
+    }
+    .top .right h1{
+        font-size: 29px;
+    }
+    .top .left{
+        min-height: 45vh;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .top .left .logo{
+        width: 100%;
+        text-align: center;
+    }
+    .top nav{
+        font-size: 14px;
+    }
+    nav .links{
+        position: absolute;
+        left: -600px;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        color: #000;
+        padding: 30px 15px ;
+        justify-content: flex-end;
+    }
+    nav .links.appear{
+        left: 0;
+    }
+    nav .toggle-btns{
+        display: block;
+    }
+    .slides-btn{
+        right: 0;
+        top: calc(45vh - 70px);
+        left: calc(100% - 139px);
+    }
+    .bottom{
+        flex-direction: column;
+    }
+    .bottom div{
+        width: 100%;
+    }
+}
